@@ -16,15 +16,16 @@ class Grid {
                 this.squares[x].push(null);
             }
         }
+
+        this.elements = [];
     }
 
 
-    addsquare(square, x, y) {
+    addSquare(square, x, y) {
         this.squares[x][y] = square;
     }
 
-    deletesquare(x, y) {
-        console.log("Deleting square at " + x + ", " + y)
+    deleteSquare(x, y) {
         this.squares[x][y] = null;
     }
 
@@ -35,6 +36,24 @@ class Grid {
             }
         }
         return null;
+    }
+
+
+    addElement(element) {
+        this.elements.push(element);
+    }
+
+    deleteElement(element) {
+        for (let i=0; i < this.elements.length; i++) {
+            if (this.elements[i] == element) {
+                this.elements.splice(i, 1);
+                return;
+            }
+        }
+    }
+
+    deleteElementAtIndex(index) {
+        this.elements.splice(index, 1);
     }
 
 
@@ -90,6 +109,11 @@ class Grid {
                     this.squares[x][y].draw(x, y, neighbors);
                 }
             }
+        }
+
+        //Draw elements
+        for (let i=0; i < this.elements.length; i++) {
+            this.elements[i].draw();
         }
     }
 }

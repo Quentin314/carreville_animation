@@ -22,7 +22,7 @@ class Square {
             this.animationTimer = 0;
             this.decayStarted = true;
         } else {
-            this.grid.deletesquare(this.grid.getCoords(this)[0], this.grid.getCoords(this)[1]);
+            this.grid.deleteSquare(this.grid.getCoords(this)[0], this.grid.getCoords(this)[1]);
         }
     }
 
@@ -44,7 +44,7 @@ class Square {
                 this.ready = false;
             }
             if (this.animationTimer == 40) {
-                this.grid.deletesquare(this.grid.getCoords(this)[0], this.grid.getCoords(this)[1]);
+                this.grid.deleteSquare(this.grid.getCoords(this)[0], this.grid.getCoords(this)[1]);
             }
         }
 
