@@ -52,7 +52,6 @@ class Line {
         let y2 = this.grid.y + this.y2*this.grid.cellSize;
 
         fill(this.c2.levels[0], this.c2.levels[1], this.c2.levels[2], this.c2.levels[3] * ((20-this.animationTimer)/20));
-        console.log(this.c2.levels[0], this.c2.levels[1], this.c2.levels[2], this.c2.levels[3] * ((20-this.animationTimer)/20));
         rect(x1 - (this.grid.cellSize * 1/16), y1 - (this.grid.cellSize * 1/16), x2 - x1 + (this.grid.cellSize * 1/8), y2 - y1 + (this.grid.cellSize * 1/8));
 
         fill(this.c2.levels[0], this.c2.levels[1], this.c2.levels[2], this.c2.levels[3] * ((20-this.animationTimer)/20));
