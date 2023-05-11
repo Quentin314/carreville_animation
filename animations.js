@@ -3,6 +3,9 @@ function animation(id, index, time) {
         case 1:
             animation1(index, time);
             break;
+        case 2:
+            animation2(index, time);
+            break;
         default:
             animationtest(index, time);
             break;
@@ -178,6 +181,123 @@ function animation1(index, time) {
             break;
     }
 }
+
+
+
+function animation2(index, time) {
+    switch (index) {
+        case 1:
+            switch (time) {
+                case 0:
+                    grid.addSquare(new Square(grid, B1, B2, B3, B4, true, true), 2, 2);
+                    grid.addSquare(new Square(grid, B1, B2, B3, B4, true, true), 3, 2);
+                    grid.addSquare(new Square(grid, B1, B2, B3, B4, true, true), 4, 2);
+                    grid.addSquare(new Square(grid, B1, B2, B3, B4, true, true), 2, 3);
+                    grid.addSquare(new Square(grid, B1, B2, B3, B4, true, true), 3, 3);
+                    grid.addSquare(new Square(grid, B1, B2, B3, B4, true, true), 4, 3);
+                    grid.addSquare(new Square(grid, B1, B2, B3, B4, true, true), 2, 4);
+                    grid.addSquare(new Square(grid, B1, B2, B3, B4, true, true), 3, 4);
+                    grid.addSquare(new Square(grid, B1, B2, B3, B4, true, true), 4, 4);
+                    break;
+            }
+            break;
+        
+        case 2:
+            switch (time) {
+                case 0:
+                    grid.addSquare(new Square(grid, B1, B2, B3, B4, true, true), 2, 5);
+                    break;
+                case 50:
+                    grid.addElement(new Line(grid, 2, 5, 3, 5, G1, G2, true, true));
+                    break;
+                case 100:
+                    grid.addElement(new Line(grid, 2, 5, 2, 6, R1, R2, true, true));
+                    grid.addElement(new Line(grid, 2, 6, 3, 6, R1, R2, true, true));
+                    grid.addElement(new Line(grid, 3, 5, 3, 6, R1, R2, true, true));
+                    break;
+            }
+            break;
+        
+        case 3:
+            switch (time) {
+                case 0:
+                    grid.elements[3].destroy();
+                    grid.elements[2].destroy();
+                    grid.elements[1].destroy();
+                    grid.elements[0].destroy();
+                    break;
+                case 50:
+                    grid.addElement(new Line(grid, 2, 2, 5, 2, Y1, Y2, true, true));
+                    grid.addElement(new Line(grid, 2, 6, 5, 6, Y1, Y2, true, true));
+                    grid.addElement(new Line(grid, 2, 2, 2, 6, Y1, Y2, true, true));
+                    grid.addElement(new Line(grid, 5, 2, 5, 6, Y1, Y2, true, true));
+                    break;
+            }
+            break;
+        
+        case 4:
+            switch (time) {
+                case 0:
+                    grid.addSquare(new Square(grid, B1, B2, B3, B4, true, true), 3, 5);
+                    break;
+                case 10:
+                    grid.addSquare(new Square(grid, B1, B2, B3, B4, true, true), 4, 5);
+                    break;
+                case 110:
+                    grid.elements[3].destroy();
+                    grid.elements[2].destroy();
+                    grid.elements[1].destroy();
+                    grid.elements[0].destroy();
+                    break;
+            }
+            break;
+        
+        case 5:
+            switch (time) {
+                case 0:
+                    grid.addSquare(new Square(grid, B1, B2, B3, B4, true, true), 5, 5);
+                    break;
+                case 50:
+                    grid.addElement(new Line(grid, 5, 5, 5, 6, G1, G2, true, true));
+                    break;
+                case 100:
+                    grid.addElement(new Line(grid, 5, 5, 6, 5, R1, R2, true, true));
+                    grid.addElement(new Line(grid, 6, 5, 6, 6, R1, R2, true, true));
+                    grid.addElement(new Line(grid, 5, 6, 6, 6, R1, R2, true, true));
+                    break;
+            }
+            break;
+        
+        case 6:
+            switch (time) {
+                case 0:
+                    grid.elements[3].destroy();
+                    grid.elements[2].destroy();
+                    grid.elements[1].destroy();
+                    grid.elements[0].destroy();
+                    break;
+                case 50:
+                    grid.addElement(new Line(grid, 2, 2, 6, 2, Y1, Y2, true, true));
+                    grid.addElement(new Line(grid, 2, 6, 6, 6, Y1, Y2, true, true));
+                    grid.addElement(new Line(grid, 2, 2, 2, 6, Y1, Y2, true, true));
+                    grid.addElement(new Line(grid, 6, 2, 6, 6, Y1, Y2, true, true));
+                    break;
+            }
+            break;
+        
+        case 7:
+            switch (time) {
+                case 0:
+                    grid.addSquare(new Square(grid, B1, B2, B3, B4, true, true), 5, 4);
+                    break;
+                case 10:
+                    grid.addSquare(new Square(grid, B1, B2, B3, B4, true, true), 5, 3);
+                    break;
+            }
+            break;
+    }
+}
+
 
 
 /*
