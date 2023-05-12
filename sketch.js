@@ -76,7 +76,7 @@ function draw() {
     }
 
     //Animations
-    animation(2, index, ticktimer);
+    animation(3, index, ticktimer);
     ticktimer++;
 
 
