@@ -1,16 +1,13 @@
 function animation(id, index, time) {
     switch (id) {
-        case 1:
+        case 0:
             animation1(index, time);
             break;
-        case 2:
+        case 1:
             animation2(index, time);
             break;
-        case 3:
+        case 2:
             animation3(index, time);
-            break;
-        default:
-            animationtest(index, time);
             break;
     }
 }
